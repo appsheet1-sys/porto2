@@ -41,6 +41,7 @@ service cloud.firestore {
     function isValidBiodata(data) {
       return data.keys().hasAll(['nama', 'pendidikanTerakhir', 'jabatan', 'jabatanTambahan', 'tahunMasuk', 'predikatKinerja'])
         && data.nama is string && data.nama.size() <= 200
+        && (!data.keys().hasAny(['nip']) || (data.nip is string && data.nip.size() <= 100))
         && data.pendidikanTerakhir is string && data.pendidikanTerakhir.size() <= 200
         && data.jabatan is string && data.jabatan.size() <= 200
         && data.jabatanTambahan is string && data.jabatanTambahan.size() <= 200

@@ -9,6 +9,10 @@
           "type": "string",
           "description": "Full name with degree"
         },
+        "nip": {
+          "type": "string",
+          "description": "Nomor Induk Pegawai of ASN"
+        },
         "pendidikanTerakhir": {
           "type": "string",
           "description": "Last educational degree"
